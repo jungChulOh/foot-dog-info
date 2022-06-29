@@ -1,15 +1,21 @@
 import React from "react";
-import NavBar from "~/components/NavBar";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
+import FooterComponent from "./components/FooterComponent";
+import HeaderComponent from "./components/HeaderComponent";
+import MainView from "./views/MainView";
 
 function App() {
   return (
-    <div>
-      <div style={{ position: "fixed", width: "100%" }}>
-        <NavBar />
-      </div>
-      <div style={{ height: "1000px" }}></div>
-    </div>
+    <>
+      <HeaderComponent />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={MainView} />
+        </Switch>
+      </BrowserRouter>
+      <FooterComponent />
+    </>
   );
 }
 

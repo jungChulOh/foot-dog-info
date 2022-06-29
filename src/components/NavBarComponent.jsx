@@ -8,7 +8,12 @@ import {
 } from "@heroicons/react/outline";
 import Logo from "@/images/icons/icon-512.png";
 
-export default function NavBar() {
+const menus = [
+  { name: "YouTube", location: "#", icon: VideoCameraIcon },
+  { name: "Album", location: "#", icon: PhotographIcon },
+];
+
+export default function NavBarComponent() {
   return (
     <Popover className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -31,30 +36,21 @@ export default function NavBar() {
 
           {/* Pc Menu */}
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            <a
-              href="#"
-              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-            >
-              <div className="flex justify-center items-center">
-                <VideoCameraIcon
-                  className="flex-shrink-0 h-6 w-6 text-gray-500"
-                  aria-hidden="true"
-                />
-                <span className="ml-4 text-gray-500">YouTube</span>
-              </div>
-            </a>
-            <a
-              href="#"
-              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-            >
-              <div className="flex justify-center items-center">
-                <PhotographIcon
-                  className="flex-shrink-0 h-6 w-6 text-gray-500"
-                  aria-hidden="true"
-                />
-                <span className="ml-4 text-gray-500">Album</span>
-              </div>
-            </a>
+            {menus.map((menu) => (
+              <a
+                href={menu.location}
+                key={menu.name}
+                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              >
+                <div className="flex justify-center items-center">
+                  <menu.icon
+                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                    aria-hidden="true"
+                  />
+                  <span className="ml-4 text-gray-500">{menu.name}</span>
+                </div>
+              </a>
+            ))}
           </Popover.Group>
 
           {/* Nav Mobile Menu Popup */}
@@ -87,39 +83,32 @@ export default function NavBar() {
                     </div>
                   </div>
                   <div className="mt-6">
-                    <nav className="grid gap-y-8"></nav>
+                    <nav className="grid gap-y-8">
+                      {menus.map((menu) => (
+                        <a
+                          key={menu.name}
+                          href={menu.location}
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                        >
+                          <menu.icon
+                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                            aria-hidden="true"
+                          ></menu.icon>
+                          <span className="ml-3 text-base font-medium text-gray-900">
+                            {menu.name}
+                          </span>
+                        </a>
+                      ))}
+                    </nav>
                   </div>
                 </div>
 
-                <div className="py-6 px-5 space-y-6">
+                {/* 하단 메뉴 */}
+                {/* <div className="py-6 px-5 space-y-6">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <a
-                      href="#"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      <div className="flex justify-center items-center">
-                        <VideoCameraIcon
-                          className="h-6 w-6 mr-2"
-                          aria-hidden="true"
-                        ></VideoCameraIcon>
-                        YouTube
-                      </div>
-                    </a>
-
-                    <a
-                      href="#"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      <div className="flex justify-center items-center">
-                        <PhotographIcon
-                          className="h-6 w-6 mr-2"
-                          aria-hidden="true"
-                        ></PhotographIcon>
-                        Album
-                      </div>
-                    </a>
+                    
                   </div>
-                </div>
+                </div> */}
               </div>
             </Popover.Panel>
           </Transition>
