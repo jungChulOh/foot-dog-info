@@ -8,9 +8,6 @@ export default function MainView() {
     <>
       <HeaderComponent />
       <MainDoorComponent />
-      <div className="mt-24" style={{ height: "100px" }}>
-        본문
-      </div>
       <FooterComponent />
     </>
   );

@@ -46,7 +46,7 @@ export default function FooterComponent() {
                 href="https://www.youtube.com/channel/UCwJHpMFBuEcoTxIDXMOMrhg"
                 target="_blank"
                 rel="noreferrer"
-                className="flex justify-center items-center mr-5 p-1 border border-gray-400 rounded-full w-10 h-10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:animate-bounce"
+                className="flex justify-center items-center mr-5 p-1 border-2 border-gray-400 rounded-full w-10 h-10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:animate-bounce"
               >
                 <YoutubeOutlined />
               </a>
@@ -54,7 +54,7 @@ export default function FooterComponent() {
                 href="https://www.instagram.com/fcfootdog_official/"
                 target="_blank"
                 rel="noreferrer"
-                className="flex justify-center items-center mr-5 p-2 border border-gray-400 rounded-full w-10 h-10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:animate-bounce"
+                className="flex justify-center items-center mr-5 p-2 border-2 border-gray-400 rounded-full w-10 h-10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:animate-bounce"
               >
                 <InstagramOutlined />
               </a>
@@ -62,7 +62,7 @@ export default function FooterComponent() {
                 href="https://band.us/@fcfootdog"
                 target="_blank"
                 rel="noreferrer"
-                className="flex justify-center items-center p-2 border border-gray-400 rounded-full w-10 h-10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:animate-bounce"
+                className="flex justify-center items-center p-2 border-2 border-gray-400 rounded-full w-10 h-10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:animate-bounce"
               >
                 <BoldOutlined />
               </a>
