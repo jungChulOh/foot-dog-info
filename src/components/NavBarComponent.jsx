@@ -6,7 +6,7 @@ import {
   VideoCameraIcon,
   PhotographIcon,
 } from "@heroicons/react/outline";
-import Logo from "@/images/icons/icon-512.png";
+import circleEmblem from "@/images/icons/circle-emblem.png";
 
 const menus = [
   { name: "YouTube", location: "#", icon: VideoCameraIcon },
@@ -22,7 +22,11 @@ export default function NavBarComponent() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">FC 풋도그</span>
-              <img className="h-8 w-auto sm:h-10" src={Logo} alt="Logo" />
+              <img
+                className="h-8 w-auto sm:h-10"
+                src={circleEmblem}
+                alt="Logo"
+              />
             </a>
           </div>
 
@@ -72,7 +76,11 @@ export default function NavBarComponent() {
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
                     <div>
-                      <img className="h-8 w-auto" src={Logo} alt="Logo" />
+                      <img
+                        className="h-8 w-auto"
+                        src={circleEmblem}
+                        alt="Logo"
+                      />
                     </div>
 
                     <div className="-mr-2">
