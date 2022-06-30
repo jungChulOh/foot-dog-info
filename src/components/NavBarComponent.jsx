@@ -17,18 +17,23 @@ export default function NavBarComponent() {
   return (
     <Popover className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:space-x-10">
           {/* Nav Logo */}
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <span className="sr-only">FC 풋도그</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src={circleEmblem}
-                alt="Logo"
-              />
+            <a href="#" className="flex justify-start items-center">
+              <img className="h-8 mr-2 sm:h-10" src={circleEmblem} alt="Logo" />
+              <span className="text-sm md:text-lg font-bold">FC 풋도그</span>
             </a>
           </div>
+
+          <a
+            href="https://open.kakao.com/o/s1q0dzne"
+            target="_blank"
+            rel="noreferrer"
+            className="p-3 md:p-4 text-xs bg-yellow-400 rounded-3xl text-white shadow-lg focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+          >
+            가입 문의
+          </a>
 
           {/* Nav Mobile menu Button */}
           <div className="-mr-2 -my-2 md:hidden">
@@ -39,6 +44,7 @@ export default function NavBarComponent() {
           </div>
 
           {/* Pc Menu */}
+
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
             {menus.map((menu) => (
               <a

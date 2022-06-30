@@ -5,8 +5,8 @@ import FadeInDiv from "./animation/FadeInDiv";
 
 export default function MainDoorComponent() {
   return (
-    <div className="relative pt-20">
-      <div className="max-w-7xl mx-auto px-4 bg-white">
+    <div className="relative pt-28">
+      <div className="max-w-7xl mx-auto px-4 bg-white overflow-hidden">
         <div className="flex flex-col justify-center items-center mb-2">
           <FadeInDiv
             className="flex flex-col justify-center items-center"
