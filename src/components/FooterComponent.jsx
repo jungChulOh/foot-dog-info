@@ -22,9 +22,9 @@ export default function FooterComponent() {
               href="https://open.kakao.com/o/s1q0dzne"
               target="_blank"
               rel="noreferrer"
-              className="transition ease-in-out p-3 md:p-5 bg-yellow-400 rounded-lg text-white mb-6 shadow-lg focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:scale-110 focus:-translate-y-2"
+              className="transition ease-in-out p-5 md:p-5 bg-yellow-400 rounded-3xl text-white mb-6 shadow-lg focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:scale-110 focus:-translate-y-2"
             >
-              모임장에게 문의하러 가기
+              가입 문의
             </a>
             <p className="font-light text-gray-400 mb-10">
               추가 문구 넣을 준비해야됨
