@@ -30,7 +30,7 @@ export default function NavBarComponent() {
             href="https://open.kakao.com/o/s1q0dzne"
             target="_blank"
             rel="noreferrer"
-            className="p-3 md:p-4 text-xs bg-yellow-400 rounded-3xl text-white shadow-lg focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            className="p-3 md:p-4 text-xs bg-yellow-400 rounded-3xl text-white focus:ring-2 focus:ring-inset focus:ring-indigo-500"
           >
             가입 문의
           </a>

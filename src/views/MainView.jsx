@@ -1,4 +1,5 @@
 import React from "react";
+import CalendarComponent from "~/components/CalendarComponent";
 import FooterComponent from "~/components/FooterComponent";
 import HeaderComponent from "~/components/HeaderComponent";
 import MainDoorComponent from "~/components/MainDoorComponent";
@@ -8,6 +9,7 @@ export default function MainView() {
     <>
       <HeaderComponent />
       <MainDoorComponent />
+      <CalendarComponent />
       <FooterComponent />
     </>
   );
