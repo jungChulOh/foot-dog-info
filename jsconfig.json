@@ -10,5 +10,5 @@
   },
   "buildOptions": {},
   "exclude": ["node_modules", "public", "dist"],
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "api"]
 }

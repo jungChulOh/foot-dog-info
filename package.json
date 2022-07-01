@@ -12,12 +12,17 @@
     "@fullcalendar/timegrid": "^5.11.0",
     "@headlessui/react": "^1.6.5",
     "@heroicons/react": "^1.0.6",
+    "@reduxjs/toolkit": "^1.8.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
     "classnames": "^2.3.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^8.0.2",
     "react-router-dom": "^5.3.3",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
@@ -27,7 +32,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "vercel": "vercel dev --listen 8080"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@redux-devtools/core": "^3.13.1",
     "autoprefixer": "^10.4.7",
     "craco-alias": "^3.0.1",
     "eslint": "^8.18.0",

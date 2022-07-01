@@ -6,7 +6,7 @@ import FadeInDiv from "./animation/FadeInDiv";
 export default function MainDoorComponent() {
   return (
     <div className="relative pt-28">
-      <div className="max-w-7xl mx-auto px-4 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 mb-10 bg-white overflow-hidden">
         <div className="flex flex-col justify-center items-center mb-2">
           <FadeInDiv
             className="flex flex-col justify-center items-center"
@@ -63,7 +63,7 @@ export default function MainDoorComponent() {
         </div>
       </div>
       <div
-        className="relative bg-no-repeat bg-cover bg-center min-h-[200px] md:min-h-[500px]"
+        className="relative mb-10 bg-no-repeat bg-cover bg-center min-h-[200px] md:min-h-[500px]"
         style={{ backgroundImage: `url(${maindoorImg})` }}
       >
         <div className="absolute m-auto top-3 md:top-0 md:bottom-0 left-0 right-0 w-[280px] md:w-[520px] h-16">
