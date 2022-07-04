@@ -10,10 +10,16 @@ const CalendarDiv = styled.div`
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+  .fc-h-event .fc-event-title {
+    white-space: pre-wrap;
+  }
+  .fc-daygrid-block-event .fc-event-time {
+    white-space: pre-wrap;
+  }
 `;
 
 export default function CalenderComponent() {
-  const API_KEY = process.env.REACT_APP_CALENDER_ID;
+  const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
   const initialView = window.outerWidth < 640 ? "listMonth" : "dayGridMonth";
   const contentHeight = window.outerWidth < 640 ? "300px" : "500px";
   return (

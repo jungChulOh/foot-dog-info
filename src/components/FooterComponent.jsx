@@ -27,7 +27,7 @@ export default function FooterComponent() {
               가입 문의
             </a>
             <p className="font-light text-gray-400 mb-10">
-              추가 문구 넣을 준비해야됨
+              가입은 항상 열려 있습니다 👋
             </p>
             <p className="text-[0.5rem] md:text-xs font-light text-gray-400">
               &copy; {new Date().getFullYear()} FC FootDog Team ⚽ Created By

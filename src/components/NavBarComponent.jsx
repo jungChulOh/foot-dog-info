@@ -1,16 +1,17 @@
 import React, { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 import { Popover, Transition } from "@headlessui/react";
 import {
   MenuIcon,
   XIcon,
   VideoCameraIcon,
-  PhotographIcon,
+  // PhotographIcon,
 } from "@heroicons/react/outline";
 import circleEmblem from "@/images/icons/circle-emblem.png";
 
 const menus = [
-  { name: "YouTube", location: "#", icon: VideoCameraIcon },
-  { name: "Album", location: "#", icon: PhotographIcon },
+  { name: "YouTube", location: "/youtube", icon: VideoCameraIcon },
+  // { name: "Album", location: "#", icon: PhotographIcon },
 ];
 
 export default function NavBarComponent() {
@@ -20,23 +21,22 @@ export default function NavBarComponent() {
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:space-x-10">
           {/* Nav Logo */}
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#" className="flex justify-start items-center">
+            <NavLink to="/" className="flex justify-start items-center">
               <img className="h-8 mr-2 sm:h-10" src={circleEmblem} alt="Logo" />
               <span className="text-sm md:text-lg font-bold">FC 풋도그</span>
-            </a>
+            </NavLink>
           </div>
 
-          <a
-            href="https://open.kakao.com/o/s1q0dzne"
-            target="_blank"
-            rel="noreferrer"
-            className="p-3 md:p-4 text-xs bg-yellow-400 rounded-3xl text-white focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-          >
-            가입 문의
-          </a>
-
           {/* Nav Mobile menu Button */}
-          <div className="-mr-2 -my-2 md:hidden">
+          <div className="flex -mr-2 -my-2 md:hidden">
+            <a
+              href="https://open.kakao.com/o/s1q0dzne"
+              target="_blank"
+              rel="noreferrer"
+              className="p-3 md:p-4 mr-6 text-xs bg-yellow-400 rounded-3xl text-white focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            >
+              가입 문의
+            </a>
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
@@ -44,13 +44,20 @@ export default function NavBarComponent() {
           </div>
 
           {/* Pc Menu */}
-
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
+            <a
+              href="https://open.kakao.com/o/s1q0dzne"
+              target="_blank"
+              rel="noreferrer"
+              className="p-3 md:p-4 text-xs bg-yellow-400 rounded-3xl text-white focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            >
+              가입 문의
+            </a>
             {menus.map((menu) => (
-              <a
-                href={menu.location}
+              <NavLink
+                to={menu.location}
                 key={menu.name}
-                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-inset focus:ring-indigo-500"
               >
                 <div className="flex justify-center items-center">
                   <menu.icon
@@ -59,7 +66,7 @@ export default function NavBarComponent() {
                   />
                   <span className="ml-4 text-gray-500">{menu.name}</span>
                 </div>
-              </a>
+              </NavLink>
             ))}
           </Popover.Group>
 
@@ -99,9 +106,9 @@ export default function NavBarComponent() {
                   <div className="mt-6">
                     <nav className="grid gap-y-8">
                       {menus.map((menu) => (
-                        <a
+                        <NavLink
                           key={menu.name}
-                          href={menu.location}
+                          to={menu.location}
                           className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                         >
                           <menu.icon
@@ -111,7 +118,7 @@ export default function NavBarComponent() {
                           <span className="ml-3 text-base font-medium text-gray-900">
                             {menu.name}
                           </span>
-                        </a>
+                        </NavLink>
                       ))}
                     </nav>
                   </div>
