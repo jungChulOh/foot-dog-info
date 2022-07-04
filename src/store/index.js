@@ -5,4 +5,5 @@ export default configureStore({
   reducer: {
     youtubes: youtubeSlice,
   },
+  devTools: process.env.NODE_ENV !== "production",
 });

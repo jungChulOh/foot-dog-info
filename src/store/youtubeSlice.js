@@ -1,4 +1,14 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
+
+export const fetchYoutubes = createAsyncThunk(
+  "youtubes/fetchYoutubes",
+  async (payload) => {
+    console.log(payload);
+    const response = await axios.get("/api/yplaylist");
+    return response.data;
+  }
+);
 
 const youtubeSlice = createSlice({
   name: "youtube",
@@ -15,6 +25,17 @@ const youtubeSlice = createSlice({
         state[key] = action.payload[key];
       });
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchYoutubes.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchYoutubes.fulfilled, (state, action) => {
+        const { items } = action.payload;
+        state.items = items;
+        state.loading = false;
+      });
   },
 });
 
