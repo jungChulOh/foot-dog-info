@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/api/yplaylist", async (req, res) => {
-  const { maxResults } = req.body;
+  const { maxResults } = req.query;
   const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
   const CHANNEL_ID = process.env.CHANNEL_ID;
 

@@ -5,13 +5,13 @@ import {
   MenuIcon,
   XIcon,
   VideoCameraIcon,
-  PhotographIcon,
+  // PhotographIcon,
 } from "@heroicons/react/outline";
 import circleEmblem from "@/images/icons/circle-emblem.png";
 
 const menus = [
   { name: "YouTube", location: "/youtube", icon: VideoCameraIcon },
-  { name: "Album", location: "#", icon: PhotographIcon },
+  // { name: "Album", location: "#", icon: PhotographIcon },
 ];
 
 export default function NavBarComponent() {
