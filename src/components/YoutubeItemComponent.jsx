@@ -1,19 +1,37 @@
 import React from "react";
 import PropTypes from "prop-types";
+import YoutubeCard from "./YoutubeCard";
 
-export default function YoutubeItemComponent({ videoId }) {
+export default function YoutubeItemComponent({ videoId, title }) {
   return (
-    <iframe
-      className="w-full mb-3 md:w-[50%] md:p-3 md:mb-0 aspect-video"
-      src={`https://www.youtube.com/embed/${videoId}`}
-    ></iframe>
+    <YoutubeCard>
+      <iframe
+        className="w-full aspect-video rounded-t border-1"
+        src={`https://www.youtube.com/embed/${videoId}`}
+      ></iframe>
+      <p className="mt-4 px-4 text-gray-600 font-bold text-sm md:text-base">
+        {title}
+      </p>
+      <div className="mt-4 text-right px-5">
+        <a
+          href={`https://youtu.be/${videoId}`}
+          target="_blank"
+          rel="noreferrer"
+          className="p-3 bg-red-600 rounded-xl text-white shadow-lg inline-block"
+        >
+          👉 Go Youtube
+        </a>
+      </div>
+    </YoutubeCard>
   );
 }
 
 YoutubeItemComponent.propTypes = {
   videoId: PropTypes.string,
+  title: PropTypes.string,
 };
 
 YoutubeItemComponent.defaultProps = {
   videoId: "",
+  title: "",
 };

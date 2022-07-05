@@ -23,7 +23,7 @@ export default function CalenderComponent() {
   const initialView = window.outerWidth < 640 ? "listMonth" : "dayGridMonth";
   const contentHeight = window.outerWidth < 640 ? "300px" : "500px";
   return (
-    <CalendarDiv className="p-3 w-full h-full overflow-x-auto">
+    <CalendarDiv className="max-w-7xl mx-auto p-3 w-full h-full overflow-x-auto">
       <Fullcalender
         viewClassNames={["sans", "text-xs"]}
         plugins={[dayGridPlugin, listPlugin, googleCalendarPlugin]}

@@ -34,7 +34,7 @@ export default function YoutubeDoorComponent() {
               href="https://www.youtube.com/channel/UCwJHpMFBuEcoTxIDXMOMrhg"
               target="_blank"
               rel="noreferrer"
-              className="flex justify-center items-center font-bold text-lg bg-red-600 text-white p-4 border-1 border-gray-400 rounded-full focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:animate-bounce"
+              className="flex justify-center items-center font-bold text-lg bg-red-600 text-white p-4 border-1 border-gray-400 rounded-full"
             >
               <YoutubeOutlined
                 className="mr-3"

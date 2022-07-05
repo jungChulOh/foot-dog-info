@@ -43,34 +43,4 @@ const FadeInDiv = styled.div`
   }
 `;
 
-// CustomDiv.propTypes = {
-//   className: PropTypes.string,
-//   children: PropTypes.array,
-//   beforeLocation: PropTypes.shape({
-//     location: PropTypes.string,
-//     value: PropTypes.number,
-//   }),
-//   afterLocation: PropTypes.shape({
-//     location: PropTypes.string,
-//     value: PropTypes.number,
-//   }),
-//   duration: PropTypes.number,
-//   delay: PropTypes.number,
-// };
-
-// CustomDiv.defaultProps = {
-//   className: "",
-//   children: [],
-//   beforeLocation: {
-//     location: "x",
-//     value: 0,
-//   },
-//   afterLocation: {
-//     location: "x",
-//     value: 0,
-//   },
-//   duration: 0,
-//   delay: 0,
-// };
-
 export default FadeInDiv;
