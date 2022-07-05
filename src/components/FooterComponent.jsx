@@ -41,7 +41,7 @@ export default function FooterComponent() {
             <img src={normalEmblem} className="h-20 w-20" alt="Logo2" />
           </div>
           <div className="basis-0 md:basis-1/2">
-            <div className="flex justify-end md:justify-center items-center">
+            <div className="flex justify-center md:justify-end items-center">
               <a
                 href="https://www.youtube.com/channel/UCwJHpMFBuEcoTxIDXMOMrhg"
                 target="_blank"
