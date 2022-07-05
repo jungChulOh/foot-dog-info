@@ -15,6 +15,7 @@ const CalendarDiv = styled.div`
   }
   .fc-daygrid-block-event .fc-event-time {
     white-space: pre-wrap;
+    min-width: 30px;
   }
 `;
 
@@ -28,15 +29,31 @@ export default function CalenderComponent() {
         viewClassNames={["sans", "text-xs"]}
         plugins={[dayGridPlugin, listPlugin, googleCalendarPlugin]}
         googleCalendarApiKey={API_KEY}
-        events={{
-          googleCalendarId: "fcfootdog@gmail.com",
-          display: "block",
-          classNames: ["text-xs"],
-        }}
+        eventSources={[
+          {
+            googleCalendarId:
+              "k5f8utmngb6cgulijpbscud0l4s6gjkk@import.calendar.google.com",
+            display: "block",
+            backgroundColor: "rgb(20 184 166)",
+            borderColor: "rgb(20 184 166)",
+          },
+          {
+            googleCalendarId:
+              "ko.south_korea#holiday@group.v.calendar.google.com",
+            display: "block",
+            backgroundColor: "rgb(244 63 94)",
+            borderColor: "rgb(244 63 94)",
+          },
+        ]}
         initialView={initialView}
         locale="ko"
         headerToolbar={{ left: "", center: "title", right: "" }}
         contentHeight={contentHeight}
+        eventTimeFormat={{
+          hour: "2-digit",
+          minute: "2-digit",
+          meridiem: false,
+        }}
         eventClick={(info) => {
           info.jsEvent.preventDefault();
         }}
