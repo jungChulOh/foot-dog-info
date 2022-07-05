@@ -3,7 +3,8 @@ import styled, { css } from "styled-components";
 const FadeInDiv = styled.div`
   ${(props) =>
     css`
-      animation: ${props.duration}s ${props.delay}s
+      opacity: 0;
+      animation: ${props.duration}s ${props.delay}s forwards
         ${props.topBottom && `topBottomMove`}
         ${props.leftRight && `leftRightMove`}
         ${props.rightLeft && `rightLeftMove`};
