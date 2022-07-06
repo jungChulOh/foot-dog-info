@@ -5,6 +5,7 @@ import {
   BoldOutlined,
 } from "@ant-design/icons";
 import normalEmblem from "@/images/icons/normal-emblem.png";
+import kakaoSpeechBubbleImg from "@/images/icons/kakaotalk_btn/kakao-speech-bubble.png";
 
 export default function FooterComponent() {
   return (
@@ -22,9 +23,12 @@ export default function FooterComponent() {
               href="https://open.kakao.com/o/s1q0dzne"
               target="_blank"
               rel="noreferrer"
-              className="transition ease-in-out p-5 md:p-5 bg-yellow-400 rounded-3xl text-white mb-6 shadow-lg focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:scale-110 focus:-translate-y-2"
+              className="flex flex-row items-center transition ease-in-out bg-yellow-300 rounded-3xl text-white mb-6 shadow-lg focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:scale-110 focus:-translate-y-2"
             >
-              가입 문의
+              <div className="p-4 rounded-l-3xl flex flex-row justify-between">
+                <img src={kakaoSpeechBubbleImg} className="w-6 h-auto" />
+              </div>
+              <p className="p-4 pl-0">가입 문의</p>
             </a>
             <p className="font-light text-gray-400 mb-10">
               가입은 항상 열려 있습니다 👋
