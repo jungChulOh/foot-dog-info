@@ -8,10 +8,10 @@ export default function AlbumsComponent() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!items.length) {
-      dispatch(fetchAlbums());
-    }
+    dispatch(fetchAlbums());
   }, []);
+
+  console.log(items);
 
   return (
     <>
