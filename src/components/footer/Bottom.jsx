@@ -1,10 +1,12 @@
 import React from "react";
-import {
-  YoutubeOutlined,
-  InstagramOutlined,
-  BoldOutlined,
-} from "@ant-design/icons";
+import // YoutubeOutlined,
+// InstagramOutlined,
+// BoldOutlined,
+"@ant-design/icons";
 import normalEmblem from "@/images/icons/normal-emblem.png";
+import youtubeIcon from "@/images/icons/youtube-icon.png";
+import instagramIcon from "@/images/icons/instagram-icon.png";
+import bandIcon from "@/images/icons/band-icon.png";
 
 export default function Bottom() {
   return (
@@ -18,25 +20,25 @@ export default function Bottom() {
             href="https://www.youtube.com/channel/UCwJHpMFBuEcoTxIDXMOMrhg"
             target="_blank"
             rel="noreferrer"
-            className="flex justify-center items-center mr-5 p-1 border-2 border-gray-400 rounded-full w-10 h-10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:animate-bounce"
+            className="flex justify-center items-center mr-5 w-10 h-auto"
           >
-            <YoutubeOutlined />
+            <img src={youtubeIcon} className="rounded bg-transparent" />
           </a>
           <a
             href="https://www.instagram.com/fcfootdog_official/"
             target="_blank"
             rel="noreferrer"
-            className="flex justify-center items-center mr-5 p-2 border-2 border-gray-400 rounded-full w-10 h-10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:animate-bounce"
+            className="flex justify-center items-center mr-5 w-10 h-auto"
           >
-            <InstagramOutlined />
+            <img src={instagramIcon} className="rounded bg-transparent" />
           </a>
           <a
             href="https://band.us/@fcfootdog"
             target="_blank"
             rel="noreferrer"
-            className="flex justify-center items-center p-2 border-2 border-gray-400 rounded-full w-10 h-10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:animate-bounce"
+            className="flex justify-center items-center w-10 h-auto"
           >
-            <BoldOutlined />
+            <img src={bandIcon} className="rounded bg-transparent" />
           </a>
         </div>
       </div>

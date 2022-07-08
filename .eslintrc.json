@@ -14,5 +14,5 @@
   },
   "plugins": ["react"],
   "rules": {},
-  "ignorePatterns": ["node_modules", "*.config.js"]
+  "ignorePatterns": ["node_modules", "*.config.js", "api"]
 }

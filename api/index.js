@@ -20,6 +20,20 @@ app.get("/api/yplaylist", async (req, res) => {
   res.status(200).json(data);
 });
 
+app.get("/api/album", async (req, res) => {
+  const BAND_ACCESS_TOKEN = process.env.BAND_ACCESS_TOKEN;
+  const BAND_KEY = process.env.BAND_KEY;
+  const PHOTO_ALBUM_KEY = process.env.PHOTO_ALBUM_KEY;
+
+  const url = `https://openapi.band.us/v2/band/album/photos?access_token=${BAND_ACCESS_TOKEN}&band_key=${BAND_KEY}&photo_album_key=${PHOTO_ALBUM_KEY}`;
+
+  const { data } = await axios.get(url, {
+    headers: { "Context-Type": "application/json" },
+  });
+
+  res.status(200).json(data);
+});
+
 module.exports = app;
 
 // Youtube API 할당량이 상당히 작아서 임시 데이터로 대체함
