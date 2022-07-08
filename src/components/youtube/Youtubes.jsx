@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchYoutubes } from "~/store/youtubeSlice";
-import YoutubeItemComponent from "./YoutubeItemComponent";
-import LoaderComponent from "./LoaderComponent";
+import LoaderComponent from "../LoaderComponent";
+import YoutubeItem from "./YoutubeItem";
 
-export default function YoutubesComponent() {
+export default function Youtubes() {
   const { loading, items } = useSelector((state) => state.youtubes);
   const dispatch = useDispatch();
 
@@ -26,7 +26,7 @@ export default function YoutubesComponent() {
             const { videoId } = id;
             const { title, publishedAt } = item.snippet;
             return (
-              <YoutubeItemComponent
+              <YoutubeItem
                 key={videoId}
                 videoId={videoId}
                 title={title}

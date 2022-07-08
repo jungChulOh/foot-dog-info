@@ -15,7 +15,7 @@ const menus = [
   // { name: "Album", location: "#", icon: PhotographIcon },
 ];
 
-export default function NavBarComponent() {
+export default function NavBar() {
   return (
     <Popover className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
