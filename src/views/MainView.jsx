@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import CalendarComponent from "~/components/CalendarComponent";
 import FooterComponent from "~/components/FooterComponent";
 import HeaderComponent from "~/components/HeaderComponent";
-import MainDoorComponent from "~/components/MainDoorComponent";
+import MainComponent from "~/components/MainComponent";
 
 export default function MainView() {
   useEffect(() => {
@@ -12,8 +11,7 @@ export default function MainView() {
   return (
     <>
       <HeaderComponent />
-      <MainDoorComponent />
-      <CalendarComponent />
+      <MainComponent />
       <FooterComponent />
     </>
   );

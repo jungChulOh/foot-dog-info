@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import FooterComponent from "~/components/FooterComponent";
 import HeaderComponent from "~/components/HeaderComponent";
-import YoutubeDoorComponent from "~/components/YoutubeDoorComponent";
+import YoutubeComponent from "~/components/YoutubeComponent";
 
 export default function YoutubeView() {
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function YoutubeView() {
   return (
     <>
       <HeaderComponent />
-      <YoutubeDoorComponent />
+      <YoutubeComponent />
       <FooterComponent />
     </>
   );

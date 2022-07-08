@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import YoutubeCard from "./YoutubeCard";
 
-export default function YoutubeItemComponent({ videoId, title }) {
+export default function YoutubeItem({ videoId, title }) {
   return (
     <YoutubeCard>
       <iframe
@@ -26,12 +26,12 @@ export default function YoutubeItemComponent({ videoId, title }) {
   );
 }
 
-YoutubeItemComponent.propTypes = {
+YoutubeItem.propTypes = {
   videoId: PropTypes.string,
   title: PropTypes.string,
 };
 
-YoutubeItemComponent.defaultProps = {
+YoutubeItem.defaultProps = {
   videoId: "",
   title: "",
 };
