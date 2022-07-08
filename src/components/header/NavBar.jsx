@@ -9,6 +9,8 @@ import {
 } from "@heroicons/react/outline";
 import circleEmblem from "@/images/icons/circle-emblem.png";
 import kakaoSpeechBubbleImg from "@/images/icons/kakaotalk_btn/kakao-speech-bubble.png";
+import useScrollTop from "~/Hooks/useScrollTop";
+import classNames from "classnames";
 
 const menus = [
   { name: "YouTube", location: "/youtube", icon: VideoCameraIcon },
@@ -16,8 +18,16 @@ const menus = [
 ];
 
 export default function NavBar() {
+  const scrollTop = useScrollTop();
+
   return (
-    <Popover className="relative bg-white">
+    <Popover
+      className={classNames(
+        "relative",
+        "bg-white",
+        scrollTop > 0 && "shadow-lg"
+      )}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:space-x-10">
           {/* Nav Logo */}
