@@ -6,6 +6,16 @@ import MainView from "./views/MainView";
 import NotFoundView from "./views/NotFoundView";
 import YoutubeView from "./views/YoutubeView";
 
+const CHANNEL_PLUGIN_KEY = process.env.REACT_APP_CHANNEL_PLUGIN_KEY;
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (CHANNEL_PLUGIN_KEY) {
+    window.ChannelIO("boot", {
+      pluginKey: CHANNEL_PLUGIN_KEY, //please fill with your plugin key
+    });
+  }
+});
+
 function App() {
   return (
     <BrowserRouter>
