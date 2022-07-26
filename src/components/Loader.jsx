@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function LoaderComponent() {
+export default function Loader() {
   return (
     <div className="fixed w-full h-full bg-gray-900/70 z-[101] top-0 left-0">
       <svg

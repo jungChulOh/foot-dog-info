@@ -1,18 +1,14 @@
-import React, { useEffect } from "react";
-import FooterComponent from "~/components/FooterComponent";
-import HeaderComponent from "~/components/HeaderComponent";
-import MainComponent from "~/components/MainComponent";
+import React from "react";
+import Footer from "~/components/Footer";
+import Header from "~/components/Header";
+import MainContent from "~/components/MainContent";
 
 export default function MainView() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
-
   return (
     <>
-      <HeaderComponent />
-      <MainComponent />
-      <FooterComponent />
+      <Header />
+      <MainContent />
+      <Footer />
     </>
   );
 }

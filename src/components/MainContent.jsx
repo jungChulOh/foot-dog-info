@@ -3,7 +3,7 @@ import AboutTeam from "./main/AboutTeam";
 import Phrase from "./main/Phrase";
 import Calendar from "./main/Calendar";
 
-export default function MainComponent() {
+export default function MainContent() {
   return (
     <div className="relative pt-28">
       <AboutTeam />

@@ -1,12 +1,12 @@
 import React from "react";
 import YoutubeDoor from "./youtube/YoutubeDoor";
-import Youtubes from "./youtube/Youtubes";
+import YoutubesContainer from "~/containers/YoutubesContainer";
 
-export default function YoutubeComponent() {
+export default function YoutubeContent() {
   return (
     <div className="relative pt-28">
       <YoutubeDoor />
-      <Youtubes />
+      <YoutubesContainer />
     </div>
   );
 }

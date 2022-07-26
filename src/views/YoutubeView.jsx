@@ -1,18 +1,14 @@
-import React, { useEffect } from "react";
-import FooterComponent from "~/components/FooterComponent";
-import HeaderComponent from "~/components/HeaderComponent";
-import YoutubeComponent from "~/components/YoutubeComponent";
+import React from "react";
+import Footer from "~/components/Footer";
+import Header from "~/components/Header";
+import YoutubeContent from "~/components/YoutubeContent";
 
 export default function YoutubeView() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
-
   return (
     <>
-      <HeaderComponent />
-      <YoutubeComponent />
-      <FooterComponent />
+      <Header />
+      <YoutubeContent />
+      <Footer />
     </>
   );
 }

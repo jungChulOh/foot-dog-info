@@ -9,12 +9,13 @@ export default function useScrollTop() {
       setScrollTop(window.scrollY);
     };
 
-    window.addEventListener("scroll", throttle(reScrollTop, 1000));
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    window.addEventListener("scroll", throttle(reScrollTop, 300));
 
     return () => {
-      window.removeEventListener("scroll", throttle(reScrollTop, 1000));
+      window.removeEventListener("scroll", throttle(reScrollTop, 300));
     };
-  });
+  }, []);
 
   return scrollTop;
 }
