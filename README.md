@@ -2,7 +2,7 @@
 
 안녕하세요. FC풋도그 공식 GitHub에 오신걸 환영합니다.
 
-![main-gif](https://www.fcfootdog.cf/images/fcfootdog-main.gif)
+![화면 기록 2022-08-23 오후 9 00 41 mov](https://user-images.githubusercontent.com/26038861/186157158-80baeac7-4822-4844-98ec-114fcf8e95ac.gif)
 
 안양소재에서 활동중인 축구 동호회 팀 입니다.
 
