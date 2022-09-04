@@ -8,13 +8,9 @@ export const fetchYoutubes = createAsyncThunk(
     const url = maxResults
       ? `/api/yplaylist?maxResults=${maxResults}`
       : `/api/yplaylist`;
-    try {
-      const response = await axios.get(url);
-      return { status: 200, data: response.data, statusText: "OK" };
-    } catch (error) {
-      const { status, statusText } = error;
-      return { status, statusText, data: {} };
-    }
+
+    const response = await axios.get(url);
+    return { status: 200, data: response.data, statusText: "OK" };
   }
 );
 
@@ -24,8 +20,8 @@ const youtubeSlice = createSlice({
     loading: false,
     items: [],
     maxResults: 6,
-    error: "",
-    massage: "",
+    statusCode: 200,
+    message: "",
     pageInfo: {},
     nextPageToken: "",
     prevPageToken: "",
@@ -44,22 +40,30 @@ const youtubeSlice = createSlice({
       })
       .addCase(fetchYoutubes.fulfilled, (state, action) => {
         const { status, statusText, data } = action.payload;
+        const { items, pageInfo, nextPageToken, prevPageToken } = data;
+        state.loading = false;
 
         if (status !== 200) {
           state.items = [];
-          state.massage = statusText;
-          state.error = status;
-        } else {
-          const { items, pageInfo, nextPageToken, prevPageToken } = data;
-          if (prevPageToken) state.prevPageToken = prevPageToken;
-          state.nextPageToken = nextPageToken;
-          state.pageInfo = pageInfo;
-          state.items = items;
-          state.massage = statusText;
-          state.error = "";
+          state.message = statusText;
+          state.statusCode = status;
+          return;
         }
 
-        state.loading = false;
+        if (prevPageToken) state.prevPageToken = prevPageToken;
+        state.nextPageToken = nextPageToken;
+        state.pageInfo = pageInfo;
+        state.items = items;
+        state.message = statusText;
+        state.statusCode = 200;
+      })
+      .addCase(fetchYoutubes.rejected, (state, action) => {
+        const { error } = action;
+        state.prevPageToken = "";
+        state.nextPageToken = "";
+        state.items = [];
+        state.message = error.message;
+        state.statusCode = 400;
       });
   },
 });

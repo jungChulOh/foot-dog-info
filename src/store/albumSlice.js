@@ -4,18 +4,14 @@ import axios from "axios";
 export const fetchAlbums = createAsyncThunk("albums/fetchAlbums", async () => {
   const url = `/api/album`;
 
-  try {
-    const response = await axios.get(url);
-    const { result_code, result_data } = response.data;
+  const response = await axios.get(url);
+  const { result_code, result_data } = response.data;
 
-    if (result_code !== 1) {
-      return { status: result_code, statusText: result_data.message, data: {} };
-    }
-
-    return { status: 200, statusText: "OK", data: result_data };
-  } catch (error) {
-    return { status: 400, statusText: "album api Error", data: {} };
+  if (result_code !== 1) {
+    return { status: result_code, statusText: result_data.message, data: {} };
   }
+
+  return { status: 200, statusText: "OK", data: result_data };
 });
 
 const albumSlice = createSlice({
@@ -25,10 +21,10 @@ const albumSlice = createSlice({
     items: [],
     resultCode: 0,
     resultData: {},
-    massage: "",
+    message: "",
     paging: {},
     totalCount: 0,
-    error: "",
+    statusCode: 200,
   },
   reducers: {
     updateState(state, action) {
@@ -44,21 +40,27 @@ const albumSlice = createSlice({
       })
       .addCase(fetchAlbums.fulfilled, (state, action) => {
         const { status, statusText, data } = action.payload;
+        const { items, totalCount, paging } = data;
+        state.loading = false;
 
-        if (status !== 200) {
+        if (statusText !== "OK") {
           state.items = [];
-          state.massage = statusText;
-          state.error = status;
-        } else {
-          const { items, totalCount, paging } = data;
-          state.items = items;
-          state.totalCount = totalCount;
-          state.paging = paging;
-          state.massage = statusText;
-          state.error = "";
+          state.message = statusText;
+          state.statusCode = status;
+          return;
         }
 
+        state.items = items;
+        state.totalCount = totalCount;
+        state.paging = paging;
+        state.message = statusText;
+        state.statusCode = 200;
+      })
+      .addCase(fetchAlbums.rejected, (state, action) => {
         state.loading = false;
+        const { error } = action;
+        state.message = error.message;
+        state.statusCode = 400;
       });
   },
 });
