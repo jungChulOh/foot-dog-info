@@ -43,9 +43,8 @@ export default function AboutTeam() {
           </p>
           <p className="text-sm md:text-lg text-gray-600 font-medium mb-2">
             👋 나이 제한 : 20 ~ 30 대 <br />
-            💵 월 회비 : 20,000원 (첫달 유예기간 10,000원) <br />
-            📑 가입 절차 : 가입문의 ➡️ 경기 참석 ➡️ 본인 가입의사시 첫달
-            유예기간(총 3~4경기) ➡️ 가입
+            💵 월 회비 : 20,000원 <br />
+            📑 가입 절차 : 가입문의 ➡️ 경기 참석 (최대 2경기) ➡️ 가입
             <br />
           </p>
         </FadeInDiv>
