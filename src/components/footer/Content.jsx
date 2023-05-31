@@ -12,7 +12,7 @@ export default function Content() {
           우리는 FC풋도그 입니다!
         </p>
         <a
-          href="https://open.kakao.com/o/s1q0dzne"
+          href="https://open.kakao.com/me/FC_Footdog"
           target="_blank"
           rel="noreferrer"
           className="flex flex-row items-center transition ease-in-out bg-yellow-300 rounded-3xl text-white mb-6 shadow-lg focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:scale-110 focus:-translate-y-2"

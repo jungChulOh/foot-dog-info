@@ -51,7 +51,7 @@ export default function NavBar() {
           {/* Nav Mobile menu Button */}
           <div className="flex -mr-2 -my-2 md:hidden">
             <a
-              href="https://open.kakao.com/o/s1q0dzne"
+              href="https://open.kakao.com/me/FC_Footdog"
               target="_blank"
               rel="noreferrer"
               className="flex flex-row items-center p-2 mr-5 text-xs bg-yellow-300 rounded-3xl text-white focus:ring-2 focus:ring-inset focus:ring-indigo-500"
@@ -70,7 +70,7 @@ export default function NavBar() {
           {/* Pc Menu */}
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
             <a
-              href="https://open.kakao.com/o/s1q0dzne"
+              href="https://open.kakao.com/me/FC_Footdog"
               target="_blank"
               rel="noreferrer"
               className="flex flex-row items-center p-2 text-xs bg-yellow-300 rounded-3xl text-white focus:ring-2 focus:ring-inset focus:ring-indigo-500"
