@@ -8,7 +8,6 @@ import {
   PhotographIcon,
 } from "@heroicons/react/outline";
 import circleEmblem from "@/images/icons/circle-emblem.png";
-import kakaoSpeechBubbleImg from "@/images/icons/kakaotalk_btn/kakao-speech-bubble.png";
 import useScrollTop from "~/Hooks/useScrollTop";
 import classNames from "classnames";
 
@@ -51,15 +50,20 @@ export default function NavBar() {
           {/* Nav Mobile menu Button */}
           <div className="flex -mr-2 -my-2 md:hidden">
             <a
+              href="https://forms.gle/mu65P214oCS8yLvF8"
+              target="_blank"
+              rel="noreferrer"
+              className="flex flex-row items-center p-2 mr-5 text-xs bg-sky-700 rounded-3xl text-white focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            >
+              <p className="mx-1 font-bold">가입신청서</p>
+            </a>
+            <a
               href="https://open.kakao.com/me/FC_Footdog"
               target="_blank"
               rel="noreferrer"
-              className="flex flex-row items-center p-2 mr-5 text-xs bg-yellow-300 rounded-3xl text-white focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="flex flex-row items-center p-2 mr-5 text-xs bg-yellow-400 rounded-3xl text-amber-950 focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             >
-              <div className="rounded-l-3xl flex flex-row justify-between mx-1">
-                <img src={kakaoSpeechBubbleImg} className="w-5 h-auto" />
-              </div>
-              <p className="mx-1">가입 문의</p>
+              <p className="mx-1 font-bold">가입문의</p>
             </a>
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
@@ -70,15 +74,21 @@ export default function NavBar() {
           {/* Pc Menu */}
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
             <a
+              href="https://forms.gle/mu65P214oCS8yLvF8"
+              target="_blank"
+              rel="noreferrer"
+              className="flex flex-row items-center p-3 bg-sky-700 rounded-3xl text-white focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            >
+              <p className="mx-1 font-bold">가입신청서</p>
+            </a>
+
+            <a
               href="https://open.kakao.com/me/FC_Footdog"
               target="_blank"
               rel="noreferrer"
-              className="flex flex-row items-center p-2 text-xs bg-yellow-300 rounded-3xl text-white focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="flex flex-row items-center p-3 bg-yellow-400 rounded-3xl text-amber-950 focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             >
-              <div className="rounded-l-3xl flex flex-row justify-between mx-1">
-                <img src={kakaoSpeechBubbleImg} className="w-5 h-auto" />
-              </div>
-              <p className="mx-1">가입 문의</p>
+              <p className="mx-1 font-bold">가입문의</p>
             </a>
             {menus.map((menu) => (
               <NavLink
